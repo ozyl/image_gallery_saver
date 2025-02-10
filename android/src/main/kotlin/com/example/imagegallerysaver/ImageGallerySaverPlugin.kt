@@ -164,7 +164,6 @@ class ImageGallerySaverPlugin : FlutterPlugin, MethodCallHandler {
             if (fileUri != null) {
                 fos = context.contentResolver.openOutputStream(fileUri)
                 if (fos != null) {
-                    println("ImageGallerySaverPlugin $quality")
                     bmp.compress(Bitmap.CompressFormat.JPEG, quality, fos)
                     fos.flush()
                     success = true
